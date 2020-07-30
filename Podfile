@@ -7,5 +7,7 @@ target 'DoSomeThing' do
 
   # Pods for DoSomeThing
 pod 'SteviaLayout'
-
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
 end

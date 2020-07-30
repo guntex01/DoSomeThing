@@ -12,8 +12,8 @@ class EngineerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .gray
+        title = "Kỹ sư"
+        view.backgroundColor = .white
         
     }
     

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0903A8C624C8AE3600DC567E /* persion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903A8C524C8AE3600DC567E /* persion.swift */; };
 		0903A8C924C8B8FC00DC567E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903A8C824C8B8FC00DC567E /* SettingViewController.swift */; };
+		090BEAC824D2D54300875604 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090BEAC724D2D54300875604 /* GoogleService-Info.plist */; };
+		090BEACA24D319CB00875604 /* ConvertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090BEAC924D319CB00875604 /* ConvertHelper.swift */; };
 		0916D8D124A33BDA00F71B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0916D8D024A33BDA00F71B21 /* AppDelegate.swift */; };
 		0916D8D324A33BDA00F71B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0916D8D224A33BDA00F71B21 /* SceneDelegate.swift */; };
 		0916D8D524A33BDA00F71B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0916D8D424A33BDA00F71B21 /* ViewController.swift */; };
@@ -25,7 +27,6 @@
 		092F368724B2C6E5003EA5C1 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F368624B2C6E5003EA5C1 /* NotificationViewController.swift */; };
 		092F368A24B2C761003EA5C1 /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F368924B2C761003EA5C1 /* MyTabBarViewController.swift */; };
 		092F368D24B2CC5F003EA5C1 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F368C24B2CC5F003EA5C1 /* CreateViewController.swift */; };
-		092F369824B3101A003EA5C1 /* IT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F369724B3101A003EA5C1 /* IT.swift */; };
 		094CD2BF24C184C600169245 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CD2BE24C184C600169245 /* HomeTableViewCell.swift */; };
 		094CD2C124C19B0900169245 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CD2C024C19B0900169245 /* MyCollectionViewCell.swift */; };
 		09683A6024BD967600F91B00 /* HomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09683A5F24BD967600F91B00 /* HomesViewController.swift */; };
@@ -44,16 +45,16 @@
 		09DA9FAE24D15BB600A897A5 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DA9FAC24D15BB600A897A5 /* NotificationTableViewCell.xib */; };
 		09DA9FB024D15BC900A897A5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA9FAF24D15BC900A897A5 /* Notification.swift */; };
 		09DA9FB524D164A900A897A5 /* home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA9FB424D164A900A897A5 /* home.swift */; };
-		09DA9FB724D165CC00A897A5 /* ITCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DA9FB624D165CC00A897A5 /* ITCollectionViewCell.swift */; };
 		09E93E1824C93A7300E756C3 /* MessagerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E93E1624C93A7300E756C3 /* MessagerTableViewCell.swift */; };
 		09E93E1924C93A7300E756C3 /* MessagerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09E93E1724C93A7300E756C3 /* MessagerTableViewCell.xib */; };
-		09FC61B024C6EC2C00C53893 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC61AF24C6EC2C00C53893 /* UIView.swift */; };
 		D6E89D94C7331F1028E3D27D /* Pods_DoSomeThing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6296DCE8FDCEFD58E8B23F46 /* Pods_DoSomeThing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0903A8C524C8AE3600DC567E /* persion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persion.swift; sourceTree = "<group>"; };
 		0903A8C824C8B8FC00DC567E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		090BEAC724D2D54300875604 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		090BEAC924D319CB00875604 /* ConvertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertHelper.swift; sourceTree = "<group>"; };
 		0916D8CD24A33BDA00F71B21 /* DoSomeThing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoSomeThing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0916D8D024A33BDA00F71B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0916D8D224A33BDA00F71B21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		092F368624B2C6E5003EA5C1 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		092F368924B2C761003EA5C1 /* MyTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarViewController.swift; sourceTree = "<group>"; };
 		092F368C24B2CC5F003EA5C1 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
-		092F369724B3101A003EA5C1 /* IT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IT.swift; sourceTree = "<group>"; };
 		094CD2BE24C184C600169245 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		094CD2C024C19B0900169245 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		09683A5F24BD967600F91B00 /* HomesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomesViewController.swift; sourceTree = "<group>"; };
@@ -91,10 +91,8 @@
 		09DA9FAC24D15BB600A897A5 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		09DA9FAF24D15BC900A897A5 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		09DA9FB424D164A900A897A5 /* home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home.swift; sourceTree = "<group>"; };
-		09DA9FB624D165CC00A897A5 /* ITCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITCollectionViewCell.swift; sourceTree = "<group>"; };
 		09E93E1624C93A7300E756C3 /* MessagerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagerTableViewCell.swift; sourceTree = "<group>"; };
 		09E93E1724C93A7300E756C3 /* MessagerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessagerTableViewCell.xib; sourceTree = "<group>"; };
-		09FC61AF24C6EC2C00C53893 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4E561EE29BEBDF76ADEEF15E /* Pods-DoSomeThing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoSomeThing.release.xcconfig"; path = "Target Support Files/Pods-DoSomeThing/Pods-DoSomeThing.release.xcconfig"; sourceTree = "<group>"; };
 		6296DCE8FDCEFD58E8B23F46 /* Pods_DoSomeThing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoSomeThing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD6263CECBEC88A9B96E7EF /* Pods-DoSomeThing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoSomeThing.debug.xcconfig"; path = "Target Support Files/Pods-DoSomeThing/Pods-DoSomeThing.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +115,7 @@
 			children = (
 				0903A8C824C8B8FC00DC567E /* SettingViewController.swift */,
 				09CBB36324C97D7A006C65E8 /* MyRequestViewController.swift */,
+				090BEAC924D319CB00875604 /* ConvertHelper.swift */,
 				09CBB36524C97D9E006C65E8 /* RequestReceivedViewController.swift */,
 			);
 			path = vcInInformation;
@@ -148,6 +147,7 @@
 				0916D8E624A3486D00F71B21 /* New Group */,
 				0917B3CA24A5994B00675DD8 /* Custom */,
 				0916D8D424A33BDA00F71B21 /* ViewController.swift */,
+				090BEAC724D2D54300875604 /* GoogleService-Info.plist */,
 				0916D8D624A33BDA00F71B21 /* Main.storyboard */,
 				0916D8D924A33BDE00F71B21 /* Assets.xcassets */,
 				0916D8DB24A33BDE00F71B21 /* LaunchScreen.storyboard */,
@@ -186,7 +186,6 @@
 				0917B3C624A5992000675DD8 /* CustomTextField.swift */,
 				0917B3C824A5994500675DD8 /* CustomButton.swift */,
 				09683A6124BD9E6A00F91B00 /* GradientPoints.swift */,
-				09FC61AF24C6EC2C00C53893 /* UIView.swift */,
 				09185DF624CF70E00094CB8A /* CustomTextFieldCreatVC.swift */,
 				09D49CE324D020AB0061E9C2 /* CustomHeader.swift */,
 			);
@@ -266,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				09D49CE624D02C8A0061E9C2 /* ITViewController.swift */,
-				09DA9FB124D1644100A897A5 /* collectionViewIT */,
 				09D49CE824D02CBB0061E9C2 /* CreationViewController.swift */,
 				09D49CEA24D02CD40061E9C2 /* EngineerViewController.swift */,
 			);
@@ -288,15 +286,6 @@
 				09DA9FAF24D15BC900A897A5 /* Notification.swift */,
 			);
 			path = modalNotification;
-			sourceTree = "<group>";
-		};
-		09DA9FB124D1644100A897A5 /* collectionViewIT */ = {
-			isa = PBXGroup;
-			children = (
-				09DA9FB624D165CC00A897A5 /* ITCollectionViewCell.swift */,
-				092F369724B3101A003EA5C1 /* IT.swift */,
-			);
-			path = collectionViewIT;
 			sourceTree = "<group>";
 		};
 		82D619BBC7A36958B4452CBA /* Frameworks */ = {
@@ -382,6 +371,7 @@
 				0916D8DD24A33BDE00F71B21 /* LaunchScreen.storyboard in Resources */,
 				0916D8DA24A33BDE00F71B21 /* Assets.xcassets in Resources */,
 				0916D8D824A33BDA00F71B21 /* Main.storyboard in Resources */,
+				090BEAC824D2D54300875604 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +424,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09FC61B024C6EC2C00C53893 /* UIView.swift in Sources */,
 				09D49CE424D020AB0061E9C2 /* CustomHeader.swift in Sources */,
 				09D49CEB24D02CD40061E9C2 /* EngineerViewController.swift in Sources */,
 				0916D8D524A33BDA00F71B21 /* ViewController.swift in Sources */,
@@ -445,7 +434,6 @@
 				09DA9FB024D15BC900A897A5 /* Notification.swift in Sources */,
 				09D49CE724D02C8A0061E9C2 /* ITViewController.swift in Sources */,
 				0917B3C724A5992000675DD8 /* CustomTextField.swift in Sources */,
-				09DA9FB724D165CC00A897A5 /* ITCollectionViewCell.swift in Sources */,
 				09CBB36624C97D9E006C65E8 /* RequestReceivedViewController.swift in Sources */,
 				092F368A24B2C761003EA5C1 /* MyTabBarViewController.swift in Sources */,
 				092F368D24B2CC5F003EA5C1 /* CreateViewController.swift in Sources */,
@@ -464,9 +452,9 @@
 				0916D8E824A3489000F71B21 /* LogInViewController.swift in Sources */,
 				09CBB36224C97495006C65E8 /* information.swift in Sources */,
 				09CBB35F24C9729A006C65E8 /* InformationTableViewCell.swift in Sources */,
+				090BEACA24D319CB00875604 /* ConvertHelper.swift in Sources */,
 				0903A8C924C8B8FC00DC567E /* SettingViewController.swift in Sources */,
 				092F368524B2C6CC003EA5C1 /* MessageViewController.swift in Sources */,
-				092F369824B3101A003EA5C1 /* IT.swift in Sources */,
 				094CD2C124C19B0900169245 /* MyCollectionViewCell.swift in Sources */,
 				0916D8D324A33BDA00F71B21 /* SceneDelegate.swift in Sources */,
 			);

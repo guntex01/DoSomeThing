@@ -8,7 +8,7 @@
 
 import UIKit
 class CustomButton: UIButton {
-
+    
     init(_ title: String, _ backgroundColor: UIColor,_ titleColor: UIColor ,_ frame: CGRect, _ font: UIFont) {
         super.init(frame: frame)
         
@@ -25,10 +25,10 @@ class CustomButton: UIButton {
     
     
     override func draw(_ rect: CGRect) {
-         
-         self.layer.cornerRadius = self.bounds.height/2
-         self.layer.masksToBounds = true
-       
+        
+        self.layer.cornerRadius = self.bounds.height/2
+        self.layer.masksToBounds = true
+        
     }
-
+    
 }

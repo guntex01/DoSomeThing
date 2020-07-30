@@ -8,16 +8,14 @@
 
 import UIKit
 class CustomTextField: UITextField {
-var placeHolder = NSMutableAttributedString()
+    var placeHolder = NSMutableAttributedString()
     init(_ plachoder: String, _ backgroundColor: UIColor,_ textColor: UIColor, _ plachoderColor: UIColor, _ frame: CGRect) {
         super.init(frame: frame)
         
         self.placeholder = plachoder
         self.backgroundColor = backgroundColor
         self.textColor = textColor
-//        placeHolder = NSMutableAttributedString(string: plachoder, attributes: [:])
-//        placeHolder.addAttribute(.foregroundColor, value: UIColor.placeholderText, range: NSRange(location: 0, length: plachoder.count))
-//        self.attributedPlaceholder = placeHolder
+        
     }
     
     required init?(coder: NSCoder) {
