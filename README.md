@@ -1,6 +1,8 @@
 # DoSomeThing
 App Tìm và nhận việc làm:
+
   Ngôn ngữ: swift
+  
   Thư viện sử dụng: SteviaLayout,Firebase/Core, Firebase/Auth, Firebase/Firestore
   
 ![4a03bj](https://user-images.githubusercontent.com/59247096/89035561-60f44400-d365-11ea-9479-8ee13a22bc92.gif)
