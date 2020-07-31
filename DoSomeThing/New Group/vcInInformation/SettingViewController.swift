@@ -9,14 +9,14 @@
 import UIKit
 
 class SettingViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Cài đặt"
     }
     
-
-   
-
+    
+    
+    
 }

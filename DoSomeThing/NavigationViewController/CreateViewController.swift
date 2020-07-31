@@ -152,7 +152,7 @@ class CreateViewController: UIViewController {
         creatButton.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 50).isActive = true
         creatButton.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -50).isActive = true
         creatButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-       
+        
         
         
     }

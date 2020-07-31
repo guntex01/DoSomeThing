@@ -29,9 +29,9 @@ class NotificationViewController: UIViewController {
     }
     func setupLayout(){
         view.layout(
-        1/10 * screeHeight,
-        |-0-tableView-0-|,
-        1/11 * screenWidth
+            1/10 * screeHeight,
+            |-0-tableView-0-|,
+            1/11 * screenWidth
         )
     }
     
@@ -49,5 +49,5 @@ extension NotificationViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-
+    
 }

@@ -97,9 +97,12 @@ extension HomesViewController: UITableViewDelegate, UITableViewDataSource {
             
             if section == 0 {
                 let itVc = ITViewController()
+                itVc.numberOfSectionIT = section
                 StrongSelf.navigationController?.pushViewController(itVc, animated: true)
+                
             }else if section == 1{
                 let creationVC = CreationViewController()
+                creationVC.numberOfSectionCreation = section
                 StrongSelf.navigationController?.pushViewController(creationVC, animated: true)
             }else{
                 let engineerVC = EngineerViewController()

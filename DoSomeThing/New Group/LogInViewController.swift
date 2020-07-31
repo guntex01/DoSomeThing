@@ -13,13 +13,13 @@ class LogInViewController: UIViewController {
     let screenWidth = UIScreen.main.bounds.width
     let screeHeight = UIScreen.main.bounds.height
     let logoImage: UIImageView = {
-    let image = UIImageView()
+        let image = UIImageView()
         image.image = UIImage(named: "_logoDoST")
         //image.backgroundColor = .white
         return image
     }()
     let dstLabel: UILabel = {
-    let label = UILabel()
+        let label = UILabel()
         label.text = "DoSomeThing"
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 30)
@@ -42,22 +42,22 @@ class LogInViewController: UIViewController {
     }()
     let loginButton: CustomButton = {
         let button = CustomButton("Đăng nhập", UIColor.white, UIColor.imageColor(), .zero, UIFont.boldSystemFont(ofSize: 22))
-        button.addTarget(self, action: #selector(nextPageHome), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         return button
     }()
     let noAccountLabel: UILabel = {
-    let label = UILabel()
+        let label = UILabel()
         label.text = "Không có tài khoản?"
-        label.textColor = UIColor.white
+        label.textColor = UIColor.textColor()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .right
         return label
     }()
     let registerButton: UIButton = {
-    let button = UIButton()
+        let button = UIButton()
         button.text("Đăng ký")
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.setTitleColor(UIColor.white, for: .normal)
+        button.setTitleColor(UIColor.textColor(), for: .normal)
         button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
         return button
     }()
@@ -77,41 +77,52 @@ class LogInViewController: UIViewController {
     }
     func setupLayout(){
         view.layout(
-        50,
-        |-100-logoImage.centerHorizontally()-100-| ~ 100,
-        1,
-        |-50-dstLabel-50-| ~ 40,
-        50,
-        |-50-nameTextField-50-| ~ 40,
-        16,
-        |-50-passwordTextField-50-| ~ 40,
-        40,
-        |-100-loginButton-100-|,
-        20,
-        |-80-noAccountLabel-registerButton-80-|
+            50,
+            |-100-logoImage.centerHorizontally()-100-| ~ 100,
+            1,
+            |-50-dstLabel-50-| ~ 40,
+            50,
+            |-50-nameTextField-50-| ~ 40,
+            16,
+            |-50-passwordTextField-50-| ~ 40,
+            40,
+            |-100-loginButton-100-|,
+            20,
+            |-80-noAccountLabel.width(150)-registerButton-80-|
         )
         
         
         logoImage.Width == logoImage.Height
     }
     @objc func nextPage(){
-    let registerVC = RegisterViewController()
+        let registerVC = RegisterViewController()
         registerVC.modalPresentationStyle = .fullScreen
         self.present( registerVC, animated: true, completion: nil)
     }
-    @objc func nextPageHome(){
-    let tabBarVC = MyTabBarViewController()
-        tabBarVC.modalPresentationStyle = .fullScreen
-        self.present( tabBarVC, animated: true, completion: nil)
-    //let navigation = UINavigationController(rootViewController: tabBarVC)
-    
-    //navigation.modalPresentationStyle = .fullScreen
-    //self.present(navigation, animated: true, completion: nil)
-    }
     @objc func tapSuperView(){
-           self.view.endEditing(true)
-       }
-    
+        self.view.endEditing(true)
+    }
+    @objc func didTapLoginButton() {
+        let loginManager = FirebaseAuthManager()
+        guard let email = nameTextField.text, let password = passwordTextField.text else { return }
+        
+        loginManager.signIn(email: email, pass: password) {[weak self] (success) in
+            guard let `self` = self else { return }
+            var message: String = ""
+            if (success) {
+                message = "User was sucessfully logged in."
+                let tabBarVC = MyTabBarViewController()
+                tabBarVC.modalPresentationStyle = .fullScreen
+                self.present(tabBarVC, animated: true)
+            } else {
+                message = "There was an error."
+                
+            }
+            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: true)
+        }
+    }
 }
 extension LogInViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -128,10 +139,10 @@ extension LogInViewController: UITextFieldDelegate {
         selectedTextField = textField
         return true
     }
-
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         print(string)
         return true
-
+        
     }
 }

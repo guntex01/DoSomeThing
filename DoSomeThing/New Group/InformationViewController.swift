@@ -8,6 +8,7 @@
 
 import UIKit
 import Stevia
+import Firebase
 class InformationViewController: UIViewController {
     let screenWidth = UIScreen.main.bounds.width
     let screeHeight = UIScreen.main.bounds.height
@@ -49,6 +50,7 @@ class InformationViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         datas = fakeData()
+        
     }
     @objc func nextSetting(){
         let settingVC = SettingViewController()
@@ -80,7 +82,7 @@ class InformationViewController: UIViewController {
     
 }
 extension InformationViewController: UITableViewDelegate, UITableViewDataSource {
-   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas.count
     }
     
@@ -92,20 +94,28 @@ extension InformationViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let a = indexPath.row
         if a == 0 {
-        let myrequestVC = MyRequestViewController()
+            let myrequestVC = MyRequestViewController()
             navigationController?.pushViewController(myrequestVC, animated: true)
         }else if a == 1 {
-        let requestReceivedVC = RequestReceivedViewController()
+            let requestReceivedVC = RequestReceivedViewController()
             navigationController?.pushViewController(requestReceivedVC, animated: true)
         }else if a == 2 {
-        let settingVC = SettingViewController()
+            let settingVC = SettingViewController()
             navigationController?.pushViewController(settingVC, animated: true)
         }else{
-        
+            let auth = Auth.auth()
+            do {
+                try auth.signOut()
+                let defaults = UserDefaults.standard
+                defaults.set(false, forKey: "isUserSignedIn")
+                self.dismiss(animated: true, completion: nil)
+            }catch let signOutError {
+                self.present(Service.createAlertController(title: "Error", message: signOutError.localizedDescription), animated: true, completion: nil)
+            }
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
     }
-
+    
 }

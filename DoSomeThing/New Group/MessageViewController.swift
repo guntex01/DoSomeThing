@@ -62,12 +62,12 @@ extension MessageViewController: UITableViewDelegate, UITableViewDataSource {
         let delete = UIContextualAction(style: .destructive, title: "Delete") {(action, view, completion) in
             self.persons.remove(at: indexPath.row)
             tableView.reloadData()
-            }
-       
+        }
+        
         delete.backgroundColor = .red
         let configration = UISwipeActionsConfiguration(actions: [delete])
         
         return configration
     }
-   
+    
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class MyTabBarViewController: UITabBarController {
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +29,7 @@ class MyTabBarViewController: UITabBarController {
         messageVC.view.backgroundColor = .white
         messageVC.tabBarItem = UITabBarItem(title: "Nhắn tin", image: UIImage(named: "chat"), tag : 1)
         let messageNavigation = UINavigationController(rootViewController: messageVC)
-
+        
         let notificationVC = NotificationViewController()
         notificationVC.view.backgroundColor = UIColor.white
         notificationVC.tabBarItem = UITabBarItem(title: "Thông báo", image: UIImage(named: "bell"), tag: 3)
@@ -41,7 +41,7 @@ class MyTabBarViewController: UITabBarController {
         let informationNavigation = UINavigationController(rootViewController: informationVC)
         
         self.setViewControllers([homeNavigation,messageNavigation,informationNavigation,notificationNavigation], animated: true)
-
+        
     }
 }
 

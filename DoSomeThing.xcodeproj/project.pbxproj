@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0903A8C624C8AE3600DC567E /* persion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903A8C524C8AE3600DC567E /* persion.swift */; };
 		0903A8C924C8B8FC00DC567E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903A8C824C8B8FC00DC567E /* SettingViewController.swift */; };
-		090BEAC824D2D54300875604 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 090BEAC724D2D54300875604 /* GoogleService-Info.plist */; };
 		090BEACA24D319CB00875604 /* ConvertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090BEAC924D319CB00875604 /* ConvertHelper.swift */; };
 		0916D8D124A33BDA00F71B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0916D8D024A33BDA00F71B21 /* AppDelegate.swift */; };
 		0916D8D324A33BDA00F71B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0916D8D224A33BDA00F71B21 /* SceneDelegate.swift */; };
@@ -27,6 +26,8 @@
 		092F368724B2C6E5003EA5C1 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F368624B2C6E5003EA5C1 /* NotificationViewController.swift */; };
 		092F368A24B2C761003EA5C1 /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F368924B2C761003EA5C1 /* MyTabBarViewController.swift */; };
 		092F368D24B2CC5F003EA5C1 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F368C24B2CC5F003EA5C1 /* CreateViewController.swift */; };
+		0932141E24D3DCB500A3E167 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932141D24D3DCB500A3E167 /* FirebaseAuthManager.swift */; };
+		0932142624D404D200A3E167 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0932142524D404D200A3E167 /* Service.swift */; };
 		094CD2BF24C184C600169245 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CD2BE24C184C600169245 /* HomeTableViewCell.swift */; };
 		094CD2C124C19B0900169245 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094CD2C024C19B0900169245 /* MyCollectionViewCell.swift */; };
 		09683A6024BD967600F91B00 /* HomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09683A5F24BD967600F91B00 /* HomesViewController.swift */; };
@@ -37,6 +38,7 @@
 		09CBB36224C97495006C65E8 /* information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBB36124C97495006C65E8 /* information.swift */; };
 		09CBB36424C97D7A006C65E8 /* MyRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBB36324C97D7A006C65E8 /* MyRequestViewController.swift */; };
 		09CBB36624C97D9E006C65E8 /* RequestReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBB36524C97D9E006C65E8 /* RequestReceivedViewController.swift */; };
+		09D20DA924D42783008145F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D20DA824D42783008145F4 /* GoogleService-Info.plist */; };
 		09D49CE424D020AB0061E9C2 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D49CE324D020AB0061E9C2 /* CustomHeader.swift */; };
 		09D49CE724D02C8A0061E9C2 /* ITViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D49CE624D02C8A0061E9C2 /* ITViewController.swift */; };
 		09D49CE924D02CBB0061E9C2 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D49CE824D02CBB0061E9C2 /* CreationViewController.swift */; };
@@ -53,7 +55,6 @@
 /* Begin PBXFileReference section */
 		0903A8C524C8AE3600DC567E /* persion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persion.swift; sourceTree = "<group>"; };
 		0903A8C824C8B8FC00DC567E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		090BEAC724D2D54300875604 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		090BEAC924D319CB00875604 /* ConvertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertHelper.swift; sourceTree = "<group>"; };
 		0916D8CD24A33BDA00F71B21 /* DoSomeThing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoSomeThing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0916D8D024A33BDA00F71B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +74,8 @@
 		092F368624B2C6E5003EA5C1 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		092F368924B2C761003EA5C1 /* MyTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarViewController.swift; sourceTree = "<group>"; };
 		092F368C24B2CC5F003EA5C1 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		0932141D24D3DCB500A3E167 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		0932142524D404D200A3E167 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		094CD2BE24C184C600169245 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		094CD2C024C19B0900169245 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		09683A5F24BD967600F91B00 /* HomesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomesViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		09CBB36124C97495006C65E8 /* information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = information.swift; sourceTree = "<group>"; };
 		09CBB36324C97D7A006C65E8 /* MyRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestViewController.swift; sourceTree = "<group>"; };
 		09CBB36524C97D9E006C65E8 /* RequestReceivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReceivedViewController.swift; sourceTree = "<group>"; };
+		09D20DA824D42783008145F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		09D49CE324D020AB0061E9C2 /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 		09D49CE624D02C8A0061E9C2 /* ITViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITViewController.swift; sourceTree = "<group>"; };
 		09D49CE824D02CBB0061E9C2 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
@@ -147,11 +151,12 @@
 				0916D8E624A3486D00F71B21 /* New Group */,
 				0917B3CA24A5994B00675DD8 /* Custom */,
 				0916D8D424A33BDA00F71B21 /* ViewController.swift */,
-				090BEAC724D2D54300875604 /* GoogleService-Info.plist */,
 				0916D8D624A33BDA00F71B21 /* Main.storyboard */,
+				09D20DA824D42783008145F4 /* GoogleService-Info.plist */,
 				0916D8D924A33BDE00F71B21 /* Assets.xcassets */,
 				0916D8DB24A33BDE00F71B21 /* LaunchScreen.storyboard */,
 				0916D8DE24A33BDE00F71B21 /* Info.plist */,
+				0932142524D404D200A3E167 /* Service.swift */,
 			);
 			path = DoSomeThing;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 		0916D8E624A3486D00F71B21 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				0932141C24D3DCA000A3E167 /* firebave */,
 				0916D8E724A3489000F71B21 /* LogInViewController.swift */,
 				099D75BC24AC36E000AF0AB6 /* RegisterViewController.swift */,
 				09683A5F24BD967600F91B00 /* HomesViewController.swift */,
@@ -208,6 +214,14 @@
 				092F368C24B2CC5F003EA5C1 /* CreateViewController.swift */,
 			);
 			path = NavigationViewController;
+			sourceTree = "<group>";
+		};
+		0932141C24D3DCA000A3E167 /* firebave */ = {
+			isa = PBXGroup;
+			children = (
+				0932141D24D3DCB500A3E167 /* FirebaseAuthManager.swift */,
+			);
+			path = firebave;
 			sourceTree = "<group>";
 		};
 		09D49CDD24D015440061E9C2 /* tableViewHome */ = {
@@ -371,7 +385,7 @@
 				0916D8DD24A33BDE00F71B21 /* LaunchScreen.storyboard in Resources */,
 				0916D8DA24A33BDE00F71B21 /* Assets.xcassets in Resources */,
 				0916D8D824A33BDA00F71B21 /* Main.storyboard in Resources */,
-				090BEAC824D2D54300875604 /* GoogleService-Info.plist in Resources */,
+				09D20DA924D42783008145F4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +449,7 @@
 				09D49CE724D02C8A0061E9C2 /* ITViewController.swift in Sources */,
 				0917B3C724A5992000675DD8 /* CustomTextField.swift in Sources */,
 				09CBB36624C97D9E006C65E8 /* RequestReceivedViewController.swift in Sources */,
+				0932141E24D3DCB500A3E167 /* FirebaseAuthManager.swift in Sources */,
 				092F368A24B2C761003EA5C1 /* MyTabBarViewController.swift in Sources */,
 				092F368D24B2CC5F003EA5C1 /* CreateViewController.swift in Sources */,
 				099D75BD24AC36E000AF0AB6 /* RegisterViewController.swift in Sources */,
@@ -445,6 +460,7 @@
 				0917B3C924A5994500675DD8 /* CustomButton.swift in Sources */,
 				09683A6024BD967600F91B00 /* HomesViewController.swift in Sources */,
 				092F368724B2C6E5003EA5C1 /* NotificationViewController.swift in Sources */,
+				0932142624D404D200A3E167 /* Service.swift in Sources */,
 				09DA9FB524D164A900A897A5 /* home.swift in Sources */,
 				09683A6224BD9E6A00F91B00 /* GradientPoints.swift in Sources */,
 				09CBB36424C97D7A006C65E8 /* MyRequestViewController.swift in Sources */,

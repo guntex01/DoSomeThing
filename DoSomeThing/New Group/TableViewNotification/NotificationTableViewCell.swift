@@ -29,10 +29,10 @@ class NotificationTableViewCell: UITableViewCell {
         avatarImage.layer.borderColor = UIColor.white.cgColor
         contentLabel.numberOfLines = 0
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

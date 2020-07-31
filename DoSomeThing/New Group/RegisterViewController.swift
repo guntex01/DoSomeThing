@@ -8,7 +8,10 @@
 
 import UIKit
 import Stevia
+import Firebase
 class RegisterViewController: UIViewController {
+    let screenWidth = UIScreen.main.bounds.width
+    let screeHeight = UIScreen.main.bounds.height
     let logoImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "_logoDoST")
@@ -60,13 +63,13 @@ class RegisterViewController: UIViewController {
     }()
     let registerButton: CustomButton = {
         let button = CustomButton("Đăng ký", UIColor.white, UIColor.imageColor(), .zero, UIFont.boldSystemFont(ofSize: 22))
-        
+        button.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         return button
     }()
     let accountLabel: UILabel = {
         let label = UILabel()
         label.text = "Đã có tài khoản?"
-        label.textColor = UIColor.white
+        label.textColor = UIColor.textColor()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .right
         return label
@@ -75,15 +78,26 @@ class RegisterViewController: UIViewController {
         let button = UIButton()
         button.text("Đăng nhập")
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        button.setTitleColor(UIColor.white, for: .normal)
+        button.setTitleColor(UIColor.textColor(), for: .normal)
         button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
         return button
+    }()
+    let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        return scrollView
+    }()
+    let containerView: UIView = {
+        let view = UIView()
+        
+        return view
     }()
     var selectedTextField: UITextField?
     override func viewDidLoad() {
         super.viewDidLoad()
         view.applyGradient(withColours: [UIColor.imageColor(),UIColor.color01()], gradientOrientation: .horizontal)
-        view.sv([logoImage, dstLabel, nameTextField, emailTextField, phoneTextField, passwordTextField, passwordTextnField, registerButton, accountLabel, loginButton])
+        view.sv(scrollView)
+        scrollView.sv(containerView)
+        containerView.sv([logoImage, dstLabel, nameTextField, emailTextField, phoneTextField, passwordTextField, passwordTextnField, registerButton, accountLabel, loginButton])
         setupLayout()
         nameTextField.delegate = self
         emailTextField.delegate = self
@@ -101,6 +115,16 @@ class RegisterViewController: UIViewController {
     }
     func setupLayout(){
         view.layout(
+            0,
+            |-0-scrollView-0-|,
+            0
+        )
+        scrollView.layout(
+            0,
+            |-0-containerView.width(screenWidth)-0-| ~ 896,
+            0
+        )
+        containerView.layout(
             50,
             |-150-logoImage.centerHorizontally()-150-| ~ 20,
             1,
@@ -118,7 +142,7 @@ class RegisterViewController: UIViewController {
             40,
             |-100-registerButton-100-|,
             20,
-            |-80-accountLabel-loginButton-80-|
+            |-80-accountLabel.width(150)-loginButton.width(80)-80-|
             
         )
         
@@ -175,5 +199,35 @@ extension RegisterViewController: UITextFieldDelegate {
         print(string)
         return true
         
+    }
+    @objc func didTapSignUpButton() {
+        
+        let signUpManager = FirebaseAuthManager()
+        
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            signUpManager.createUser(email: email, password: password) {[weak self] (success) in
+                guard let strongSelf = self else { return }
+                var message: String = ""
+                if (success) {
+                    message = "User was sucessfully created."
+                    self?.dismiss(animated: true, completion: nil)
+                } else {
+                    message = "There was an error."
+                }
+                let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                strongSelf.present(alertController, animated: true)
+                
+            }
+            
+        }
+        
+        
+        func isValidEmail(_ email: String) -> Bool {
+            let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            
+            let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+            return emailPred.evaluate(with: email)
+        }
     }
 }

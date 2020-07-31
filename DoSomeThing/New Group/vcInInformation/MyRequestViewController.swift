@@ -44,7 +44,7 @@ class MyRequestViewController: UIViewController {
         return date
     }()
     let dateLabel = UILabel()
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -103,7 +103,7 @@ class MyRequestViewController: UIViewController {
     @objc func valueChangeDatePicker() {
         dateLabel.text = ConvertHelper.stringFromDate(date: datePicker.date, format: "dd/MM/yyyy")
         dateLabel.sizeToFit()
-       
+        
     }
     @objc func doneDateAction() {
         dateTextField.text = ConvertHelper.stringFromDate(date: datePicker.date, format: "dd/MM/yyyy")
@@ -130,5 +130,5 @@ extension MyRequestViewController: UIPickerViewDelegate, UIPickerViewDataSource 
         
         professionTextField.text = dataProfession[row]
         professionTextField.resignFirstResponder()
-}
+    }
 }
