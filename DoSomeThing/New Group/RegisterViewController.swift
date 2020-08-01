@@ -210,10 +210,11 @@ extension RegisterViewController: UITextFieldDelegate {
                 var message: String = ""
                 if (success) {
                     message = "User was sucessfully created."
-                    self?.dismiss(animated: true, completion: nil)
+                    
                 } else {
                     message = "There was an error."
                 }
+                self?.dismiss(animated: true, completion: nil)
                 let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 strongSelf.present(alertController, animated: true)
